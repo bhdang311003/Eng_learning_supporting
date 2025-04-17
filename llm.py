@@ -3,7 +3,7 @@ from openai import OpenAI # type: ignore
 
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
-  api_key="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",
+  api_key="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",
 )
 
 def gen_answer(input):
