@@ -77,7 +77,7 @@ with tabs[5]:
         st.session_state["show_quiz"] = True
 
     if "quiz_list" not in st.session_state:
-        st.session_state["quiz_list"] = gen_quiz(topic)  
+        #st.session_state["quiz_list"] = gen_quiz(topic)  
 
     quiz_list = st.session_state["quiz_list"]
 
