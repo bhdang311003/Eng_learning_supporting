@@ -73,10 +73,12 @@ with tabs[5]:
     if "show_quiz" not in st.session_state:
         st.session_state["show_quiz"] = False  
 
+    if "quiz_list" not in st.session_state:
+            st.session_state["quiz_list"] = []
+        
     if st.button("Bắt đầu quiz", key="quiz"):
         st.session_state["show_quiz"] = True
-        if "quiz_list" not in st.session_state:
-            st.session_state["quiz_list"] = gen_quiz(topic) 
+        st.session_state["quiz_list"] = gen_quiz(topic) 
  
     quiz_list = st.session_state["quiz_list"]
 
