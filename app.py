@@ -75,23 +75,22 @@ with tabs[5]:
 
     if st.button("Bắt đầu quiz", key="quiz"):
         st.session_state["show_quiz"] = True
+        if "quiz_list" not in st.session_state:
+            st.session_state["quiz_list"] = gen_quiz(topic) 
+ 
+    quiz_list = st.session_state["quiz_list"]
 
-    # if "quiz_list" not in st.session_state:
-    #     st.session_state["quiz_list"] = gen_quiz(topic)  
-
-    # quiz_list = st.session_state["quiz_list"]
-
-    # if st.session_state["show_quiz"]:
-    #     for idx, quiz in enumerate(quiz_list):
-    #         question, answers, correct_answer = quiz.split('|')
-    #         anss = [item.strip() for item in answers.split(', ')]
-    #         st.write(f"{idx + 1}. {question}")
-    #         for ans in anss:
-    #             if st.button(f"{ans}", key = f'check_{idx}_{ans}'):
-    #                 if ans == correct_answer.strip():
-    #                     st.write("Chính xác")
-    #                 else:
-    #                     st.write(f"Chưa chính xác, đáp án là {correct_answer}")
+    if st.session_state["show_quiz"]:
+        for idx, quiz in enumerate(quiz_list):
+            question, answers, correct_answer = quiz.split('|')
+            anss = [item.strip() for item in answers.split(', ')]
+            st.write(f"{idx + 1}. {question}")
+            for ans in anss:
+                if st.button(f"{ans}", key = f'check_{idx}_{ans}'):
+                    if ans == correct_answer.strip():
+                        st.write("Chính xác")
+                    else:
+                        st.write(f"Chưa chính xác, đáp án là {correct_answer}")
 
 with tabs[6]:
     st.header("Yêu cầu tự do")
