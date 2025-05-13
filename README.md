@@ -2,6 +2,11 @@
 
 Ứng dụng hỗ trợ học tiếng Anh này sẽ là công cụ giúp người dùng có thể ôn tập cũng như học thêm về tiếng Anh.
 
+### Công nghệ sử dụng
+- Sử dụng API mô hình ngôn ngữ lớn từ openai (llama, gpt,...).
+- Prompt Engineering, Prompt Tuning.
+- Streamlit.
+
 ### Các chức năng:
 
 1. Kiểm tra ngữ pháp: giúp người dùng sửa lỗi ngữ pháp trong văn bản tiếng Anh.
@@ -24,6 +29,11 @@ streamlit run app.py
 
 ------------------------------------------------------------------------------------------
 This English learning support application will be a tool to help users review and learn more about English.
+
+### Technologies
+- Using LLM API from openai (llama, gpt,...).
+- Prompt Engineering, Prompt Tuning.
+- Streamlit.
 
 ### Functions:
 
